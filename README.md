@@ -110,7 +110,7 @@ We consider CNN feature and PatchEmbedding feature both \
 ![augmentations](model.PNG "model") \
 we utilize [DeiT](https://arxiv.org/abs/2012.12877) deep learning model. The image split into patches and pass the EffcientNet. We got (Batch, N, embedding features), (Batch, M, embedding features) respectively. These tokens are concatenated, through global pooling, and fed to the transformer encoder. The encoder consists of Multi-Self Attention (MSA) and 2 layers of GeLU function. Distillation token is trained by the teacher network (E7).
 
-## Data preparation
+## preprocessing
 reference : https://github.com/selimsef/dfdc_deepfake_challenge.git \
 summerizing @selim dfdc code \
 root_dir = training dataset directory \
