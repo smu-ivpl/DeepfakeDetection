@@ -1,11 +1,16 @@
 ## Efficient Deepfake Detection Technique Based on Vision Transformer and Distillation
 
 ### code reference  
+This code is based on @selim of DeepfakeDetection challenge \
+We change modeling part and training method \
 https://github.com/selimsef/dfdc_deepfake_challenge.git
+
+vision transformer model of timm \
 https://github.com/rwightman/pytorch-image-models/blob/master/timm/models/vision_transformer.py
 
 ### challenge
 [Deepfake Detection Challenge June 25, 2020 facebook AI](https://ai.facebook.com/datasets/dfdc/)
+paper
 [The DeepFake Detection Challenge (DFDC) Dataset Paper](https://arxiv.org/abs/2006.07397)
 
 
