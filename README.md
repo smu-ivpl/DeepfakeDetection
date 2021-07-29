@@ -46,9 +46,9 @@ conda install \
               jupyterlab \
               ipykernel \
               matplotlib \
-	          ncurses \
+	      ncurses \
               numpy \
-			  statsmodels \
+	      statsmodels \
               pandas \
               pillow \
               pip \
@@ -58,7 +58,7 @@ conda install \
               testpath \
               tqdm \
               pandas \
-			  opencv \
+	      opencv \
 	&& conda clean -p \
 	&& conda clean -t \
 	&& conda clean --yes --all
@@ -98,7 +98,7 @@ Usually, deepfake detection model is CNN structure, but we utilize [Vision Trans
 - train.sh : execution main training python file
 - predict_submission.sh : execution test python file
 
-####model
+#### model
 
 ![augmentations](model.PNG "model")
 we utilize [DeiT](https://arxiv.org/abs/2012.12877) deep learning model. The image split into patches and pass the EffcientNet. We got (Batch, N, embedding features), (Batch, M, embedding features) respectively. These tokens are concatenated, through global pooling, and fed to the transformer encoder. The encoder consists of Multi-Self Attention (MSA) and 2 layers of GeLU function. Distillation token is trained by the teacher network (E7).
@@ -127,7 +127,7 @@ root_dir = training dataset directory
 `python preprocessing/generate_folds.py --root-dir trainig_dataset_directory --out folds.csv`
 
 
-#####or 
+##### or 
 
 `sh preprocess_data.sh
 `
@@ -141,13 +141,13 @@ root_dir = training dataset directory
 
 During training checkpoints are saved for every epoch.
 
-####or
+#### or
 ```
 python -u -m torch.distributed.launch --nproc_per_node=$NUM_GPUS --master_port 9901 training/pipelines/train_classifier.py \
  --distributed --config configs/deit_distill.json --freeze-epochs 0 --test_every 1 --opt-level O1 --label-smoothing 0.01 --folds-csv folds.csv  --fold 0 --seed 111 --data-dir $ROOT_DIR --prefix deit_d_111_ > logs/deit_d_111
 ```
 
-####parameter setting
+#### parameter setting
 **`deit_distill.json`** :
 ```
 {
@@ -188,7 +188,7 @@ python -u -m torch.distributed.launch --nproc_per_node=$NUM_GPUS --master_port 9
 
 `sh predict_submission_vit.sh`
 
-####or
+#### or
 
 ```
 TEST_DIR=$1
@@ -214,13 +214,13 @@ label = pd.read_csv(test_path)
 predict = pd.read_csv('SOTA_last_weight.csv') #prediction1
 predict2 = pd.read_csv('ViT_Distill_last_weight.csv') #prediction2
 ```
-####EfficientNet confusion matrix
+#### EfficientNet confusion matrix
 ![augmentations](E7.PNG "EfficientNet-B7")
-####Our Model confusion matrix
+#### Our Model confusion matrix
 ![augmentations](Our_model.PNG "Our model")
 
 
-##ViT CAM
+## ViT CAM
 ```
 python create_cam.py --dataset OWN --dataset_path ./images --model_path $Weight_path --model_name $Model_name
 ```
