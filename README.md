@@ -1,4 +1,6 @@
 ## Efficient Deepfake Detection Technique Based on Vision Transformer and Distillation
+paper : https://arxiv.org/pdf/2104.01353.pdf
+
 
 ### code reference  
 This code is based on @selim of DeepfakeDetection challenge \
