@@ -9,8 +9,8 @@ vision transformer model of timm \
 https://github.com/rwightman/pytorch-image-models/blob/master/timm/models/vision_transformer.py
 
 ### challenge
-[Deepfake Detection Challenge June 25, 2020 facebook AI](https://ai.facebook.com/datasets/dfdc/)
-paper
+[Deepfake Detection Challenge June 25, 2020 facebook AI](https://ai.facebook.com/datasets/dfdc/) \
+paper \
 [The DeepFake Detection Challenge (DFDC) Dataset Paper](https://arxiv.org/abs/2006.07397)
 
 
@@ -103,9 +103,9 @@ Usually, deepfake detection model is CNN structure, but we utilize [Vision Trans
 - train.sh : execution main training python file
 - predict_submission.sh : execution test python file
 
-#### model
+#### Model
 
-![augmentations](model.PNG "model")
+![augmentations](model.PNG "model") \
 we utilize [DeiT](https://arxiv.org/abs/2012.12877) deep learning model. The image split into patches and pass the EffcientNet. We got (Batch, N, embedding features), (Batch, M, embedding features) respectively. These tokens are concatenated, through global pooling, and fed to the transformer encoder. The encoder consists of Multi-Self Attention (MSA) and 2 layers of GeLU function. Distillation token is trained by the teacher network (E7).
 
 ## Data preparation
