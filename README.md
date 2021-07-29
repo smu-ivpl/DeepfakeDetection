@@ -73,7 +73,7 @@ pip install albumentations timm pytorch_toolbelt tensorboardx
 
 
 ## description 
-This project is deepfake detection algorithm based on [DeiT](https://arxiv.org/abs/2012.12877).
+This project is deepfake detection algorithm based on [DeiT](https://arxiv.org/abs/2012.12877). \
 Usually, deepfake detection model is CNN structure, but we utilize [Vision Transformer](https://arxiv.org/abs/2010.11929).
 
 
@@ -109,9 +109,9 @@ Usually, deepfake detection model is CNN structure, but we utilize [Vision Trans
 we utilize [DeiT](https://arxiv.org/abs/2012.12877) deep learning model. The image split into patches and pass the EffcientNet. We got (Batch, N, embedding features), (Batch, M, embedding features) respectively. These tokens are concatenated, through global pooling, and fed to the transformer encoder. The encoder consists of Multi-Self Attention (MSA) and 2 layers of GeLU function. Distillation token is trained by the teacher network (E7).
 
 ## Data preparation
-reference : https://github.com/selimsef/dfdc_deepfake_challenge.git
-summerizing @selim dfdc code
-root_dir = training dataset directory
+reference : https://github.com/selimsef/dfdc_deepfake_challenge.git \
+summerizing @selim dfdc code \
+root_dir = training dataset directory \
 (dfdc_train_xxx folder must be prepared)
 
 
