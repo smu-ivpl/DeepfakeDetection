@@ -141,8 +141,8 @@ root_dir = training dataset directory \
 
 ## Training
 
-**`sh train.sh`** (EfficientNet-B7)
-**`sh train-vit.sh`** (Vision Transformer)
+**`sh train.sh`** (EfficientNet-B7) \
+**`sh train-vit.sh`** (Vision Transformer) \
 **`sh train-distill.sh`** (DeiT)
 
 
