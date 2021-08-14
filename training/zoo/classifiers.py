@@ -8,7 +8,7 @@ from timm.models.efficientnet import tf_efficientnet_b4_ns, tf_efficientnet_b3_n
     tf_efficientnet_b5_ns, tf_efficientnet_b2_ns, tf_efficientnet_b6_ns, tf_efficientnet_b7_ns
 from timm.models.vision_transformer import vit_small_patch16_224, vit_base_patch16_224, \
     vit_base_patch16_384, vit_base_patch32_384, vit_large_patch16_224, vit_large_patch16_384, \
-    vit_large_patch32_384, vit_huge_patch16_224, vit_huge_patch32_384
+    vit_large_patch32_384 #, vit_huge_patch16_224, vit_huge_patch32_384 update
 from timm.models.senet import legacy_seresnext50_32x4d
 from torch import nn
 from torch.nn.modules.dropout import Dropout
@@ -33,6 +33,7 @@ encoder_params = {
         "features": 768,
         "init_op":partial(deit_base_patch16_224, pretrained=True, drop_path_rate=0.2)
     },
+    '''
     "vit_huge_patch16_224": {
         "features": 1280,
         "init_op": partial(vit_huge_patch16_224, pretrained=True, drop_path_rate=0.2)
@@ -41,6 +42,7 @@ encoder_params = {
         "features": 1280,
         "init_op": partial(vit_huge_patch32_384, pretrained=True, drop_path_rate=0.2)
     },
+    '''
     "vit_large_patch32_384": {
         "features": 1024,
         "init_op": partial(vit_large_patch32_384, pretrained=True, drop_path_rate=0.2)
