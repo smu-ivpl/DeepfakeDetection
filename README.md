@@ -236,3 +236,19 @@ python create_cam.py --dataset OWN --dataset_path ./images --model_path $Weight_
 ```
 
 ![augmentations](CAM.PNG "CAM result")
+
+## testing images
+TEST_DIR = png image root path
+```
+TEST_DIR=$1
+CSV=$2
+
+python predict_images.py \
+ --test-dir $TEST_DIR \
+ --output $CSV \
+ --models deit_d_111_DeepFakeClassifier_Distill_deit_distill_large_patch32_384_0_last \
+ deit_d_555_DeepFakeClassifier_Distill_deit_distill_large_patch32_384_0_last \
+ deit_d_777_DeepFakeClassifier_Distill_deit_distill_large_patch32_384_0_last \
+ deit_d_888_DeepFakeClassifier_Distill_deit_distill_large_patch32_384_0_last \
+ deit_d_999_DeepFakeClassifier_Distill_deit_distill_large_patch32_384_0_last
+```
