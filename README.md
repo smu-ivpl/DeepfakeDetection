@@ -1,6 +1,6 @@
 ## Efficient Deepfake Detection Technique Based on Vision Transformer and Distillation
 Pubkished paper : https://arxiv.org/pdf/2104.01353.pdf \
-Young-Jin Heo, Woon-Ha Yeo, Byung-Gyu Kim*, "Deepfake Detection Algorithm Based on Improved Vision Transformer," Applied Intelligence (Springer), (https://doi.org/10.1007/s10489-022-03867-9), July 26, 2022 (online first) 
+                 Young-Jin Heo, Woon-Ha Yeo, Byung-Gyu Kim*, "Deepfake Detection Algorithm Based on Improved Vision Transformer," Applied Intelligence (Springer), (https://doi.org/10.1007/s10489-022-03867-9), July 26, 2022 (online first) 
 
 ### code reference  
 This code is based on @selim of DeepfakeDetection challenge \
